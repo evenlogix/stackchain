@@ -1,0 +1,3 @@
+import 'package:signals/signals.dart';
+
+final appTitleSignal = signal<String>('{{project_pascal}}');

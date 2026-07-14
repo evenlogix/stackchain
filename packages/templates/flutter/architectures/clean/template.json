@@ -1,0 +1,6 @@
+{
+  "id": "architecture-clean",
+  "kind": "architecture",
+  "name": "Clean Architecture",
+  "description": "Domain-centric layers with clear dependency rules"
+}

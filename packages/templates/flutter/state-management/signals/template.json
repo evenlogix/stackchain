@@ -1,0 +1,8 @@
+{
+  "id": "state-signals",
+  "kind": "state-management",
+  "dependencies": {
+    "signals": "^5.5.0",
+    "signals_flutter": "^5.5.0"
+  }
+}

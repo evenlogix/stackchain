@@ -1,0 +1,10 @@
+/// OAuth client configuration placeholder for {{project_name}}.
+class OAuthConfig {
+  const OAuthConfig({
+    required this.clientId,
+    required this.redirectUri,
+  });
+
+  final String clientId;
+  final String redirectUri;
+}

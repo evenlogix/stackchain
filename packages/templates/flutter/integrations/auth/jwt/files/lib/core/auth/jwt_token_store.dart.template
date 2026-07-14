@@ -1,0 +1,9 @@
+class JwtTokenStore {
+  String? accessToken;
+  String? refreshToken;
+
+  void clear() {
+    accessToken = null;
+    refreshToken = null;
+  }
+}

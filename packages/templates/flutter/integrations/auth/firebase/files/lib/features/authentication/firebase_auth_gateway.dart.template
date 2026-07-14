@@ -1,0 +1,3 @@
+/// Firebase Auth integration scaffold.
+/// Configure Firebase for your platforms, then implement sign-in flows here.
+library;

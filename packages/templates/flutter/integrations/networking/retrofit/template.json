@@ -1,0 +1,14 @@
+{
+  "id": "networking-retrofit",
+  "kind": "integration",
+  "dependencies": {
+    "dio": "^5.7.0",
+    "retrofit": "^4.4.1",
+    "json_annotation": "^4.9.0"
+  },
+  "devDependencies": {
+    "build_runner": "^2.4.13",
+    "retrofit_generator": "^9.1.4",
+    "json_serializable": "^6.9.0"
+  }
+}

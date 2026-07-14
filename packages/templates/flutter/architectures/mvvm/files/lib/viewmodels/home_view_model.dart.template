@@ -1,0 +1,5 @@
+class HomeViewModel {
+  String title = '{{project_pascal}}';
+
+  void dispose() {}
+}

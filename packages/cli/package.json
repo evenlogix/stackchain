@@ -1,0 +1,44 @@
+{
+  "name": "@stackchain/cli",
+  "version": "0.1.0",
+  "description": "StackChain CLI — generate production-ready software foundations",
+  "type": "module",
+  "bin": {
+    "stackchain": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node ../../scripts/chmod-bin.mjs packages/cli/dist/index.js",
+    "dev": "tsc -p tsconfig.json --watch",
+    "test": "vitest run --passWithNoTests",
+    "lint": "eslint src --max-warnings 0",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@stackchain/engine": "workspace:*",
+    "@stackchain/registry": "workspace:*",
+    "@stackchain/sdk": "workspace:*",
+    "@stackchain/shared": "workspace:*",
+    "@stackchain/templates": "workspace:*",
+    "chalk": "^5.4.1",
+    "commander": "^12.1.0",
+    "ora": "^8.1.1",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/prompts": "^2.4.9",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

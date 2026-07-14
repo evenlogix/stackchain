@@ -1,0 +1,13 @@
+{
+  "name": "flutter",
+  "version": "0.1.0",
+  "description": "Official Flutter generators and architecture layers",
+  "generators": [],
+  "commands": [
+    {
+      "name": "flutter-info",
+      "command": "flutter info",
+      "description": "Show Flutter plugin capabilities"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "state-getx",
+  "kind": "state-management",
+  "dependencies": {
+    "get": "^4.6.6"
+  }
+}

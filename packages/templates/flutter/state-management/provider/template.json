@@ -1,0 +1,7 @@
+{
+  "id": "state-provider",
+  "kind": "state-management",
+  "dependencies": {
+    "provider": "^6.1.2"
+  }
+}

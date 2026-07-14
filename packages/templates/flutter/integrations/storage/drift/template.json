@@ -1,0 +1,14 @@
+{
+  "id": "storage-drift",
+  "kind": "integration",
+  "dependencies": {
+    "drift": "^2.22.1",
+    "sqlite3_flutter_libs": "^0.5.28",
+    "path_provider": "^2.1.5",
+    "path": "^1.9.1"
+  },
+  "devDependencies": {
+    "drift_dev": "^2.22.1",
+    "build_runner": "^2.4.13"
+  }
+}

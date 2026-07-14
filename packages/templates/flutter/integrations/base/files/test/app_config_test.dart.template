@@ -1,0 +1,9 @@
+import 'package:flutter_test/flutter_test.dart';
+import 'package:{{project_name}}/core/config/app_config.dart';
+
+void main() {
+  test('AppConfig exposes project metadata', () {
+    expect(AppConfig.appName, '{{project_name}}');
+    expect(AppConfig.packageId, '{{package_id}}');
+  });
+}

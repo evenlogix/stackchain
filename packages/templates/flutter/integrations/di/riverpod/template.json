@@ -1,0 +1,7 @@
+{
+  "id": "di-riverpod",
+  "kind": "integration",
+  "dependencies": {
+    "flutter_riverpod": "^2.6.1"
+  }
+}

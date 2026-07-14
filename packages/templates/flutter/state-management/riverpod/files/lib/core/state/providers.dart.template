@@ -1,0 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+/// Root providers live here as the project grows.
+final appNameProvider = Provider<String>((ref) => '{{project_name}}');

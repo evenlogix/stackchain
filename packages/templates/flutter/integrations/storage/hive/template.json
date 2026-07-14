@@ -1,0 +1,8 @@
+{
+  "id": "storage-hive",
+  "kind": "integration",
+  "dependencies": {
+    "hive": "^2.2.3",
+    "hive_flutter": "^1.1.0"
+  }
+}

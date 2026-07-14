@@ -1,0 +1,7 @@
+{
+  "id": "networking-dio",
+  "kind": "integration",
+  "dependencies": {
+    "dio": "^5.7.0"
+  }
+}

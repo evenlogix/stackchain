@@ -1,0 +1,8 @@
+{
+  "id": "state-riverpod",
+  "kind": "state-management",
+  "dependencies": {
+    "flutter_riverpod": "^2.6.1",
+    "riverpod": "^2.6.1"
+  }
+}

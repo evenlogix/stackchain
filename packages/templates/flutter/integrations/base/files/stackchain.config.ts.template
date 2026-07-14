@@ -1,0 +1,24 @@
+/**
+ * StackChain project configuration.
+ *
+ * Used by the StackChain CLI for regeneration, upgrades, and generators.
+ * The Flutter app does NOT import or depend on StackChain at runtime.
+ */
+export default {
+  version: 1,
+  project: {
+    name: '{{project_name}}',
+  },
+  organization: {
+    identifier: '{{organization}}',
+  },
+  packageId: '{{package_id}}',
+  framework: 'flutter',
+  architecture: '{{architecture}}',
+  stateManagement: '{{state_management}}',
+  dependencyInjection: '{{dependency_injection}}',
+  networking: '{{networking}}',
+  storage: '{{storage}}',
+  authentication: '{{authentication}}',
+  plugins: [],
+};

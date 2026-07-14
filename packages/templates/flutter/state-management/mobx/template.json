@@ -1,0 +1,12 @@
+{
+  "id": "state-mobx",
+  "kind": "state-management",
+  "dependencies": {
+    "mobx": "^2.3.3",
+    "flutter_mobx": "^2.2.1"
+  },
+  "devDependencies": {
+    "build_runner": "^2.4.13",
+    "mobx_codegen": "^2.6.1"
+  }
+}

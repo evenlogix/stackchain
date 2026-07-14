@@ -1,0 +1,2 @@
+/// Riverpod doubles as DI — register overrides at the ProviderScope root.
+library;

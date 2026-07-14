@@ -1,0 +1,8 @@
+{
+  "id": "state-bloc",
+  "kind": "state-management",
+  "dependencies": {
+    "flutter_bloc": "^9.0.0",
+    "bloc": "^9.0.0"
+  }
+}

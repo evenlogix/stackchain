@@ -1,0 +1,2 @@
+/// Provider-based app state root.
+library;

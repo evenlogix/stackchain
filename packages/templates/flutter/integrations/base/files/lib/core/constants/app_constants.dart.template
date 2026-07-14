@@ -1,0 +1,6 @@
+class AppConstants {
+  AppConstants._();
+
+  static const String appName = '{{project_name}}';
+  static const Duration defaultTimeout = Duration(seconds: 30);
+}

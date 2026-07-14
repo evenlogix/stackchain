@@ -1,0 +1,13 @@
+{
+  "id": "storage-isar",
+  "kind": "integration",
+  "dependencies": {
+    "isar": "^3.1.0+1",
+    "isar_flutter_libs": "^3.1.0+1",
+    "path_provider": "^2.1.5"
+  },
+  "devDependencies": {
+    "isar_generator": "^3.1.0+1",
+    "build_runner": "^2.4.13"
+  }
+}

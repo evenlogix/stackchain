@@ -1,0 +1,38 @@
+# {{project_pascal}}
+
+Production-ready Flutter application scaffolded by [StackChain](https://github.com/evenlogix/stackchain).
+
+> StackChain is a development tool only. This project has **no runtime dependency** on StackChain.
+
+## Stack
+
+| Concern | Choice |
+|--------|--------|
+| Architecture | `{{architecture}}` |
+| State management | `{{state_management}}` |
+| Dependency injection | `{{dependency_injection}}` |
+| Networking | `{{networking}}` |
+| Storage | `{{storage}}` |
+| Authentication | `{{authentication}}` |
+| Package ID | `{{package_id}}` |
+
+## Getting started
+
+```bash
+flutter pub get
+flutter run
+```
+
+## Project layout
+
+See `lib/` for the architecture-specific structure. Team standards and regeneration live in `stackchain.config.ts`.
+
+## Adding code with StackChain
+
+From this directory:
+
+```bash
+stackchain add feature payments
+stackchain add usecase create_payment --feature payments
+stackchain add screen payment_list --feature payments
+```

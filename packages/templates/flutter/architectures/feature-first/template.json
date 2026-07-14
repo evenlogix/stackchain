@@ -1,0 +1,6 @@
+{
+  "id": "architecture-feature-first",
+  "kind": "architecture",
+  "name": "Feature First",
+  "description": "Features own their data, domain, and presentation folders"
+}

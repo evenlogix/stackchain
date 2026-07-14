@@ -1,0 +1,3 @@
+/// Isar database bootstrap for {{project_name}}.
+/// Run build_runner after adding collection schemas.
+library;

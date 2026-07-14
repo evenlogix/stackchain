@@ -1,0 +1,7 @@
+{
+  "id": "networking-http",
+  "kind": "integration",
+  "dependencies": {
+    "http": "^1.2.2"
+  }
+}
