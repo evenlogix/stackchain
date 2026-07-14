@@ -12,7 +12,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -20,7 +21,8 @@
     "test": "vitest run",
     "lint": "eslint src --max-warnings 0",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "prepack": "pnpm run build"
   },
   "dependencies": {
     "@stackchain/shared": "workspace:*"
@@ -28,5 +30,27 @@
   "devDependencies": {
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
-  }
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evenlogix/stackchain.git",
+    "directory": "packages/engine"
+  },
+  "homepage": "https://github.com/evenlogix/stackchain#readme",
+  "bugs": {
+    "url": "https://github.com/evenlogix/stackchain/issues"
+  },
+  "keywords": [
+    "stackchain",
+    "generator",
+    "scaffolding",
+    "cli"
+  ]
 }

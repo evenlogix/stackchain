@@ -19,7 +19,8 @@ import {
 
 function commandExists(command: string): Promise<boolean> {
   return new Promise((resolve) => {
-    const child = spawn(command, ['--version'], { stdio: 'ignore', shell: true });
+    const checker = process.platform === 'win32' ? 'where' : 'which';
+    const child = spawn(checker, [command], { stdio: 'ignore' });
     child.on('error', () => resolve(false));
     child.on('close', (code) => resolve(code === 0));
   });
@@ -27,7 +28,11 @@ function commandExists(command: string): Promise<boolean> {
 
 function run(command: string, args: string[], cwd: string): Promise<void> {
   return new Promise((resolve, reject) => {
-    const child = spawn(command, args, { cwd, stdio: 'inherit', shell: true });
+    const child = spawn(command, args, {
+      cwd,
+      stdio: 'inherit',
+      shell: process.platform === 'win32',
+    });
     child.on('error', reject);
     child.on('close', (code) => {
       if (code === 0) resolve();

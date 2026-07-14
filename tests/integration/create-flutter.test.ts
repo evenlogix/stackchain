@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { spawn } from 'node:child_process';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-const cliEntry = path.join(repoRoot, 'packages/cli/dist/index.js');
+const cliEntry = path.join(repoRoot, 'packages/cli/dist/bin.js');
 
 function runStackChain(
   args: string[],

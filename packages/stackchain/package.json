@@ -1,0 +1,47 @@
+{
+  "name": "stackchain",
+  "version": "0.1.0",
+  "description": "StackChain CLI — encode proven engineering decisions into automation",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "stackchain": "./bin/stackchain.js"
+  },
+  "files": [
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evenlogix/stackchain.git",
+    "directory": "packages/stackchain"
+  },
+  "homepage": "https://github.com/evenlogix/stackchain#readme",
+  "bugs": {
+    "url": "https://github.com/evenlogix/stackchain/issues"
+  },
+  "keywords": [
+    "stackchain",
+    "cli",
+    "flutter",
+    "scaffolding",
+    "generator"
+  ],
+  "dependencies": {
+    "@stackchain/cli": "workspace:*"
+  },
+  "scripts": {
+    "build": "node -e \"process.exit(0)\"",
+    "test": "node -e \"process.exit(0)\"",
+    "lint": "node -e \"process.exit(0)\"",
+    "typecheck": "node -e \"process.exit(0)\"",
+    "clean": "node -e \"process.exit(0)\""
+  }
+}

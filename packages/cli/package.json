@@ -2,9 +2,10 @@
   "name": "@stackchain/cli",
   "version": "0.1.0",
   "description": "StackChain CLI — generate production-ready software foundations",
+  "license": "MIT",
   "type": "module",
   "bin": {
-    "stackchain": "./dist/index.js"
+    "stackchain": "./dist/bin.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,15 +16,42 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evenlogix/stackchain.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/evenlogix/stackchain#readme",
+  "bugs": {
+    "url": "https://github.com/evenlogix/stackchain/issues"
+  },
+  "keywords": [
+    "stackchain",
+    "cli",
+    "flutter",
+    "scaffolding",
+    "generator",
+    "architecture",
+    "dx"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json && node ../../scripts/chmod-bin.mjs packages/cli/dist/index.js",
+    "build": "tsc -p tsconfig.json && node ../../scripts/chmod-bin.mjs packages/cli/dist/bin.js",
     "dev": "tsc -p tsconfig.json --watch",
     "test": "vitest run --passWithNoTests",
     "lint": "eslint src --max-warnings 0",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "prepack": "pnpm run build"
   },
   "dependencies": {
     "@stackchain/engine": "workspace:*",

@@ -1,4 +1,5 @@
 ---
+"stackchain": minor
 "@stackchain/cli": minor
 "@stackchain/engine": minor
 "@stackchain/sdk": minor
@@ -7,4 +8,4 @@
 "@stackchain/registry": minor
 ---
 
-Initial StackChain platform release: composable Flutter generators, plugin SDK, and CLI.
+Initial npm-ready release: CLI bin entry, doctor command, composable Flutter generators, and publish metadata.

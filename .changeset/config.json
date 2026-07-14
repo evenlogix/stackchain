@@ -2,10 +2,26 @@
   "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": false,
-  "fixed": [],
+  "fixed": [
+    [
+      "stackchain",
+      "@stackchain/cli",
+      "@stackchain/engine",
+      "@stackchain/shared",
+      "@stackchain/templates",
+      "@stackchain/sdk",
+      "@stackchain/registry"
+    ]
+  ],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": []
+  "ignore": [
+    "@stackchain/flutter",
+    "@stackchain/firebase",
+    "@stackchain/security",
+    "@stackchain/fintech",
+    "@stackchain/supabase"
+  ]
 }

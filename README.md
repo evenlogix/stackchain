@@ -51,10 +51,20 @@ stackchain/
 
 ## Installation
 
+### From npm (recommended)
+
+```bash
+npm install -g stackchain
+# or
+npm install -g @stackchain/cli
+
+stackchain --help
+stackchain doctor
+```
+
 ### Prerequisites
 
 - Node.js 20+
-- pnpm 9+
 - Flutter SDK (recommended for full Android/iOS scaffolding)
 
 ### From source
@@ -72,7 +82,7 @@ pnpm link --global ./packages/cli
 ```bash
 pnpm stackchain --help
 # or
-node packages/cli/dist/index.js --help
+node packages/cli/dist/bin.js --help
 ```
 
 ## CLI usage
@@ -254,6 +264,7 @@ Enterprise teams can publish private plugins (`stackchain-plugin-bank`) encoding
 
 - [Architecture](docs/architecture.md)
 - [Plugin development](docs/plugins.md)
+- [Publishing to npm](docs/publishing.md)
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 - [SECURITY.md](SECURITY.md)

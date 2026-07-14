@@ -21,7 +21,7 @@
     "test": "vitest run --passWithNoTests",
     "lint": "eslint src --max-warnings 0",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist *.tsbuildinfo"
   },
   "dependencies": {
     "@stackchain/sdk": "workspace:*"
@@ -29,5 +29,6 @@
   "devDependencies": {
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
-  }
+  },
+  "private": true
 }
