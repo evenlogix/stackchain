@@ -7,14 +7,14 @@ import {
   type GeneratorContext,
   type StackChainConfig,
   type TemplateLayer,
-} from '@stackchain/shared';
-import { FileManager, GeneratorEngine, TemplateEngine } from '@stackchain/engine';
+} from '@evenlogix/stackchain-shared';
+import { FileManager, GeneratorEngine, TemplateEngine } from '@evenlogix/stackchain-engine';
 import {
   reactArchitecturePath,
   reactBasePath,
   reactIntegrationPath,
   reactStateManagementPath,
-} from '@stackchain/templates';
+} from '@evenlogix/stackchain-templates';
 
 export function buildReactConfig(options: CreateProjectOptions): StackChainConfig {
   assertValidProjectName(options.name, 'npm');

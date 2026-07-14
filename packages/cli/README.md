@@ -1,14 +1,14 @@
-# @stackchain/cli
+# @evenlogix/stackchain-cli
 
 Generate production-ready software foundations.
 
 ```bash
-npm install -g @stackchain/cli
+npm install -g @evenlogix/stackchain
 # or
-npx @stackchain/cli create flutter my_app --org com.company -y
+npx @evenlogix/stackchain-cli create flutter my_app --org com.company -y
 ```
 
-Also published as [`stackchain`](https://www.npmjs.com/package/stackchain) for `npm i -g stackchain`.
+Also published as [`@evenlogix/stackchain`](https://www.npmjs.com/package/@evenlogix/stackchain) for `npm i -g @evenlogix/stackchain`.
 
 ## Commands
 

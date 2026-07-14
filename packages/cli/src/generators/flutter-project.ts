@@ -8,14 +8,14 @@ import {
   type GeneratorContext,
   type StackChainConfig,
   type TemplateLayer,
-} from '@stackchain/shared';
-import { FileManager, GeneratorEngine, TemplateEngine } from '@stackchain/engine';
+} from '@evenlogix/stackchain-shared';
+import { FileManager, GeneratorEngine, TemplateEngine } from '@evenlogix/stackchain-engine';
 import {
   flutterArchitecturePath,
   flutterBasePath,
   flutterIntegrationPath,
   flutterStateManagementPath,
-} from '@stackchain/templates';
+} from '@evenlogix/stackchain-templates';
 
 function commandExists(command: string): Promise<boolean> {
   return new Promise((resolve) => {

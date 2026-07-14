@@ -1,4 +1,4 @@
-import type { TemplateFile } from '@stackchain/shared';
+import type { TemplateFile } from '@evenlogix/stackchain-shared';
 
 const VARIABLE_PATTERN = /\{\{\s*([a-zA-Z0-9_.]+)\s*\}\}/g;
 

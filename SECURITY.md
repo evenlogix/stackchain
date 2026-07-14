@@ -24,7 +24,7 @@ We aim to acknowledge reports within **72 hours** and provide a remediation time
 In scope:
 
 - The StackChain CLI and monorepo packages
-- Official `@stackchain/*` plugins
+- Official `@evenlogix/stackchain-*` plugins
 - Template generation paths that could overwrite unexpected files outside the project directory
 
 Out of scope:

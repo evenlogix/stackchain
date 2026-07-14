@@ -4,13 +4,13 @@
   "commit": false,
   "fixed": [
     [
-      "stackchain",
-      "@stackchain/cli",
-      "@stackchain/engine",
-      "@stackchain/shared",
-      "@stackchain/templates",
-      "@stackchain/sdk",
-      "@stackchain/registry"
+      "@evenlogix/stackchain",
+      "@evenlogix/stackchain-cli",
+      "@evenlogix/stackchain-engine",
+      "@evenlogix/stackchain-shared",
+      "@evenlogix/stackchain-templates",
+      "@evenlogix/stackchain-sdk",
+      "@evenlogix/stackchain-registry"
     ]
   ],
   "linked": [],
@@ -18,10 +18,10 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "@stackchain/flutter",
-    "@stackchain/firebase",
-    "@stackchain/security",
-    "@stackchain/fintech",
-    "@stackchain/supabase"
+    "@evenlogix/stackchain-flutter",
+    "@evenlogix/stackchain-firebase",
+    "@evenlogix/stackchain-security",
+    "@evenlogix/stackchain-fintech",
+    "@evenlogix/stackchain-supabase"
   ]
 }

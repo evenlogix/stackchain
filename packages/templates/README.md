@@ -1,4 +1,4 @@
-# @stackchain/templates
+# @evenlogix/stackchain-templates
 
 Composable template layers for StackChain generators.
 

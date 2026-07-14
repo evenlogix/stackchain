@@ -47,19 +47,19 @@ importers:
 
   packages/cli:
     dependencies:
-      '@stackchain/engine':
+      '@evenlogix/stackchain-engine':
         specifier: workspace:*
         version: link:../engine
-      '@stackchain/registry':
+      '@evenlogix/stackchain-registry':
         specifier: workspace:*
         version: link:../registry
-      '@stackchain/sdk':
+      '@evenlogix/stackchain-sdk':
         specifier: workspace:*
         version: link:../plugin-sdk
-      '@stackchain/shared':
+      '@evenlogix/stackchain-shared':
         specifier: workspace:*
         version: link:../shared
-      '@stackchain/templates':
+      '@evenlogix/stackchain-templates':
         specifier: workspace:*
         version: link:../templates
       chalk:
@@ -87,7 +87,7 @@ importers:
 
   packages/engine:
     dependencies:
-      '@stackchain/shared':
+      '@evenlogix/stackchain-shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:
@@ -100,10 +100,10 @@ importers:
 
   packages/plugin-sdk:
     dependencies:
-      '@stackchain/engine':
+      '@evenlogix/stackchain-engine':
         specifier: workspace:*
         version: link:../engine
-      '@stackchain/shared':
+      '@evenlogix/stackchain-shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:
@@ -116,7 +116,7 @@ importers:
 
   packages/plugins/fintech:
     dependencies:
-      '@stackchain/sdk':
+      '@evenlogix/stackchain-sdk':
         specifier: workspace:*
         version: link:../../plugin-sdk
     devDependencies:
@@ -129,7 +129,7 @@ importers:
 
   packages/plugins/firebase:
     dependencies:
-      '@stackchain/sdk':
+      '@evenlogix/stackchain-sdk':
         specifier: workspace:*
         version: link:../../plugin-sdk
     devDependencies:
@@ -142,7 +142,7 @@ importers:
 
   packages/plugins/flutter:
     dependencies:
-      '@stackchain/sdk':
+      '@evenlogix/stackchain-sdk':
         specifier: workspace:*
         version: link:../../plugin-sdk
     devDependencies:
@@ -155,7 +155,7 @@ importers:
 
   packages/plugins/security:
     dependencies:
-      '@stackchain/sdk':
+      '@evenlogix/stackchain-sdk':
         specifier: workspace:*
         version: link:../../plugin-sdk
     devDependencies:
@@ -168,7 +168,7 @@ importers:
 
   packages/plugins/supabase:
     dependencies:
-      '@stackchain/sdk':
+      '@evenlogix/stackchain-sdk':
         specifier: workspace:*
         version: link:../../plugin-sdk
     devDependencies:
@@ -181,10 +181,10 @@ importers:
 
   packages/registry:
     dependencies:
-      '@stackchain/sdk':
+      '@evenlogix/stackchain-sdk':
         specifier: workspace:*
         version: link:../plugin-sdk
-      '@stackchain/shared':
+      '@evenlogix/stackchain-shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:
@@ -206,13 +206,13 @@ importers:
 
   packages/stackchain:
     dependencies:
-      '@stackchain/cli':
+      '@evenlogix/stackchain-cli':
         specifier: workspace:*
         version: link:../cli
 
   packages/templates:
     dependencies:
-      '@stackchain/shared':
+      '@evenlogix/stackchain-shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:

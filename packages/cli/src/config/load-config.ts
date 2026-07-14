@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import type { StackChainConfig } from '@stackchain/shared';
-import { FileManager } from '@stackchain/engine';
+import type { StackChainConfig } from '@evenlogix/stackchain-shared';
+import { FileManager } from '@evenlogix/stackchain-engine';
 
 const CONFIG_CANDIDATES = [
   'stackchain.config.ts',

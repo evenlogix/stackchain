@@ -1,7 +1,7 @@
 import type { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
-import type { ComponentKind } from '@stackchain/shared';
+import type { ComponentKind } from '@evenlogix/stackchain-shared';
 import { ComponentGenerator } from '../generators/component.js';
 import { findProjectRoot, loadStackChainConfig } from '../config/load-config.js';
 

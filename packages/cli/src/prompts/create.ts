@@ -24,7 +24,7 @@ import {
   type NetworkingId,
   type StateManagementId,
   type StorageId,
-} from '@stackchain/shared';
+} from '@evenlogix/stackchain-shared';
 
 export interface CreatePromptDefaults {
   name: string;

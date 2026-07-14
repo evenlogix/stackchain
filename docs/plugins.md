@@ -5,13 +5,13 @@
 ```bash
 mkdir stackchain-plugin-acme && cd stackchain-plugin-acme
 pnpm init
-pnpm add @stackchain/sdk
+pnpm add @evenlogix/stackchain-sdk
 ```
 
 `src/index.ts`:
 
 ```ts
-import { definePlugin } from '@stackchain/sdk';
+import { definePlugin } from '@evenlogix/stackchain-sdk';
 
 export default definePlugin({
   name: 'acme',
@@ -72,7 +72,7 @@ Install by short name:
 
 ```bash
 stackchain plugin install firebase
-# → @stackchain/firebase
+# → @evenlogix/stackchain-firebase
 ```
 
 See `packages/plugins/*` for reference implementations.

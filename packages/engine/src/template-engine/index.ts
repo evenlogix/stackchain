@@ -1,6 +1,6 @@
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
-import type { TemplateFile, TemplateLayer } from '@stackchain/shared';
+import type { TemplateFile, TemplateLayer } from '@evenlogix/stackchain-shared';
 
 export interface LoadedTemplate {
   root: string;

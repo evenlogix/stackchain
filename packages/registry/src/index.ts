@@ -1,7 +1,7 @@
 import { readFile, mkdir, writeFile, access, constants } from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
-import type { PluginManifest, StackChainPlugin } from '@stackchain/sdk';
+import type { PluginManifest, StackChainPlugin } from '@evenlogix/stackchain-sdk';
 
 export interface InstalledPlugin {
   name: string;
@@ -19,23 +19,23 @@ export interface RegistryState {
 /** Official StackChain ecosystem packages */
 export const OFFICIAL_PLUGINS: Record<string, { packageName: string; description: string }> = {
   flutter: {
-    packageName: '@stackchain/flutter',
+    packageName: '@evenlogix/stackchain-flutter',
     description: 'Official Flutter generators and architecture layers',
   },
   firebase: {
-    packageName: '@stackchain/firebase',
+    packageName: '@evenlogix/stackchain-firebase',
     description: 'Firebase Auth, Firestore, and Cloud Messaging integrations',
   },
   security: {
-    packageName: '@stackchain/security',
+    packageName: '@evenlogix/stackchain-security',
     description: 'Security baselines and hardened defaults',
   },
   fintech: {
-    packageName: '@stackchain/fintech',
+    packageName: '@evenlogix/stackchain-fintech',
     description: 'Fintech patterns and compliance-oriented scaffolds',
   },
   supabase: {
-    packageName: '@stackchain/supabase',
+    packageName: '@evenlogix/stackchain-supabase',
     description: 'Supabase auth and data integrations',
   },
 };

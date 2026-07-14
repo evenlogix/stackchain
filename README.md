@@ -39,11 +39,11 @@ stackchain/
 ├── packages/
 │   ├── cli/              # stackchain CLI
 │   ├── engine/           # generator, template, file, dependency, variables
-│   ├── plugin-sdk/       # @stackchain/sdk
+│   ├── plugin-sdk/       # @evenlogix/stackchain-sdk
 │   ├── templates/        # composable templates (flutter / react / backend)
 │   ├── registry/         # plugin registry
 │   ├── shared/           # shared types & validators
-│   └── plugins/          # official @stackchain/* plugins
+│   └── plugins/          # official @evenlogix/stackchain-* plugins
 ├── docs/
 ├── examples/
 ├── tests/
@@ -55,9 +55,7 @@ stackchain/
 ### From npm (recommended)
 
 ```bash
-npm install -g stackchain
-# or
-npm install -g @stackchain/cli
+npm install -g @evenlogix/stackchain
 
 stackchain --help
 stackchain doctor
@@ -251,11 +249,11 @@ This enables regeneration, upgrades, migrations, and internal standards — with
 Install the SDK:
 
 ```bash
-pnpm add @stackchain/sdk
+pnpm add @evenlogix/stackchain-sdk
 ```
 
 ```ts
-import { definePlugin } from '@stackchain/sdk';
+import { definePlugin } from '@evenlogix/stackchain-sdk';
 
 export default definePlugin({
   name: 'firebase',
@@ -291,11 +289,11 @@ Enterprise teams can publish private plugins (`stackchain-plugin-bank`) encoding
 
 | Package | Purpose |
 |---------|---------|
-| `@stackchain/flutter` | Flutter generators |
-| `@stackchain/firebase` | Firebase integrations |
-| `@stackchain/security` | Security baselines |
-| `@stackchain/fintech` | Fintech scaffolds |
-| `@stackchain/supabase` | Supabase integrations |
+| `@evenlogix/stackchain-flutter` | Flutter generators |
+| `@evenlogix/stackchain-firebase` | Firebase integrations |
+| `@evenlogix/stackchain-security` | Security baselines |
+| `@evenlogix/stackchain-fintech` | Fintech scaffolds |
+| `@evenlogix/stackchain-supabase` | Supabase integrations |
 
 ## Documentation
 

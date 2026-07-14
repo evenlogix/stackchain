@@ -1,5 +1,5 @@
 {
-  "name": "@stackchain/sdk",
+  "name": "@evenlogix/stackchain-sdk",
   "version": "0.1.0",
   "description": "Plugin SDK for building StackChain generators and integrations",
   "type": "module",
@@ -25,8 +25,8 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
-    "@stackchain/shared": "workspace:*",
-    "@stackchain/engine": "workspace:*"
+    "@evenlogix/stackchain-shared": "workspace:*",
+    "@evenlogix/stackchain-engine": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

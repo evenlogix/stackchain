@@ -1,5 +1,5 @@
 {
-  "name": "@stackchain/engine",
+  "name": "@evenlogix/stackchain-engine",
   "version": "0.1.0",
   "description": "Composable generator engine for StackChain",
   "type": "module",
@@ -25,7 +25,7 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
-    "@stackchain/shared": "workspace:*"
+    "@evenlogix/stackchain-shared": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

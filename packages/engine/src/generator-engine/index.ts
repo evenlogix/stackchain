@@ -5,7 +5,7 @@ import type {
   GeneratorContext,
   TemplateFile,
   TemplateLayer,
-} from '@stackchain/shared';
+} from '@evenlogix/stackchain-shared';
 import { FileManager } from '../file-manager/index.js';
 import { DependencyManager } from '../dependency-manager/index.js';
 import { resolveTemplateFile, type VariableMap } from '../variable-resolver/index.js';

@@ -1,4 +1,4 @@
-import { definePlugin } from '@stackchain/sdk';
+import { definePlugin } from '@evenlogix/stackchain-sdk';
 
 export default definePlugin({
   name: 'security',

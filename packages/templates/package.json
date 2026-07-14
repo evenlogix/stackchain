@@ -1,5 +1,5 @@
 {
-  "name": "@stackchain/templates",
+  "name": "@evenlogix/stackchain-templates",
   "version": "0.1.0",
   "description": "Composable StackChain project templates",
   "type": "module",
@@ -30,7 +30,7 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
-    "@stackchain/shared": "workspace:*"
+    "@evenlogix/stackchain-shared": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

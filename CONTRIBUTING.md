@@ -27,13 +27,13 @@ pnpm stackchain create flutter demo_app --org com.example -y --skip-flutter-crea
 
 | Package | Role |
 |---------|------|
-| `@stackchain/cli` | User-facing CLI |
-| `@stackchain/engine` | Generators, templates, files, deps, variables |
-| `@stackchain/sdk` | Plugin authoring SDK |
-| `@stackchain/templates` | Composable template layers |
-| `@stackchain/registry` | Plugin install / discovery |
-| `@stackchain/shared` | Shared types & validators |
-| `@stackchain/*` plugins | Official ecosystem |
+| `@evenlogix/stackchain-cli` | User-facing CLI |
+| `@evenlogix/stackchain-engine` | Generators, templates, files, deps, variables |
+| `@evenlogix/stackchain-sdk` | Plugin authoring SDK |
+| `@evenlogix/stackchain-templates` | Composable template layers |
+| `@evenlogix/stackchain-registry` | Plugin install / discovery |
+| `@evenlogix/stackchain-shared` | Shared types & validators |
+| `@evenlogix/stackchain-*` plugins | Official ecosystem |
 
 ## Commit convention
 

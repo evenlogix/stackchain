@@ -7,13 +7,13 @@ import {
   type GeneratorContext,
   type StackChainConfig,
   type TemplateLayer,
-} from '@stackchain/shared';
-import { FileManager, GeneratorEngine, TemplateEngine } from '@stackchain/engine';
+} from '@evenlogix/stackchain-shared';
+import { FileManager, GeneratorEngine, TemplateEngine } from '@evenlogix/stackchain-engine';
 import {
   backendArchitecturePath,
   backendBasePath,
   backendIntegrationPath,
-} from '@stackchain/templates';
+} from '@evenlogix/stackchain-templates';
 
 export function buildBackendConfig(options: CreateProjectOptions): StackChainConfig {
   assertValidProjectName(options.name, 'npm');

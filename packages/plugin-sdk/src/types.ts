@@ -1,4 +1,4 @@
-import type { GeneratorContext, TemplateLayer } from '@stackchain/shared';
+import type { GeneratorContext, TemplateLayer } from '@evenlogix/stackchain-shared';
 
 export interface PluginCommand {
   name: string;

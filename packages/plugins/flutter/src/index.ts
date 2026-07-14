@@ -1,8 +1,8 @@
 /**
- * Official @stackchain/flutter plugin.
+ * Official @evenlogix/stackchain-flutter plugin.
  * Provides Flutter-oriented generators for the StackChain ecosystem.
  */
-import { definePlugin } from '@stackchain/sdk';
+import { definePlugin } from '@evenlogix/stackchain-sdk';
 
 export default definePlugin({
   name: 'flutter',

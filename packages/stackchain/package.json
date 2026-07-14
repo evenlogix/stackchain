@@ -1,5 +1,5 @@
 {
-  "name": "stackchain",
+  "name": "@evenlogix/stackchain",
   "version": "0.1.0",
   "description": "StackChain CLI — encode proven engineering decisions into automation",
   "license": "MIT",
@@ -35,7 +35,7 @@
     "generator"
   ],
   "dependencies": {
-    "@stackchain/cli": "workspace:*"
+    "@evenlogix/stackchain-cli": "workspace:*"
   },
   "scripts": {
     "build": "node -e \"process.exit(0)\"",

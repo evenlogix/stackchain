@@ -13,7 +13,7 @@ import type {
   NetworkingId,
   StateManagementId,
   StorageId,
-} from '@stackchain/shared';
+} from '@evenlogix/stackchain-shared';
 
 const SUPPORTED = new Set(['flutter', 'react', 'backend']);
 

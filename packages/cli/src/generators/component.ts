@@ -7,8 +7,8 @@ import {
   type StackChainConfig,
   type TemplateFile,
   type TemplateLayer,
-} from '@stackchain/shared';
-import { GeneratorEngine } from '@stackchain/engine';
+} from '@evenlogix/stackchain-shared';
+import { GeneratorEngine } from '@evenlogix/stackchain-engine';
 import { configToVariables } from '../config/load-config.js';
 
 function featureRoot(architecture: string, feature: string): string {

@@ -1,5 +1,5 @@
 {
-  "name": "@stackchain/firebase",
+  "name": "@evenlogix/stackchain-firebase",
   "version": "0.1.0",
   "description": "Firebase Auth, Firestore, and Cloud Messaging integrations",
   "type": "module",
@@ -24,7 +24,7 @@
     "clean": "rm -rf dist *.tsbuildinfo"
   },
   "dependencies": {
-    "@stackchain/sdk": "workspace:*"
+    "@evenlogix/stackchain-sdk": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

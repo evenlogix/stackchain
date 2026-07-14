@@ -1,5 +1,5 @@
 {
-  "name": "@stackchain/cli",
+  "name": "@evenlogix/stackchain-cli",
   "version": "0.1.0",
   "description": "StackChain CLI — generate production-ready software foundations",
   "license": "MIT",
@@ -54,11 +54,11 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
-    "@stackchain/engine": "workspace:*",
-    "@stackchain/registry": "workspace:*",
-    "@stackchain/sdk": "workspace:*",
-    "@stackchain/shared": "workspace:*",
-    "@stackchain/templates": "workspace:*",
+    "@evenlogix/stackchain-engine": "workspace:*",
+    "@evenlogix/stackchain-registry": "workspace:*",
+    "@evenlogix/stackchain-sdk": "workspace:*",
+    "@evenlogix/stackchain-shared": "workspace:*",
+    "@evenlogix/stackchain-templates": "workspace:*",
     "chalk": "^5.4.1",
     "commander": "^12.1.0",
     "ora": "^8.1.1",

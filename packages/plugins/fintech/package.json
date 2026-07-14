@@ -1,5 +1,5 @@
 {
-  "name": "@stackchain/fintech",
+  "name": "@evenlogix/stackchain-fintech",
   "version": "0.1.0",
   "description": "Fintech patterns and compliance-oriented scaffolds",
   "type": "module",
@@ -24,7 +24,7 @@
     "clean": "rm -rf dist *.tsbuildinfo"
   },
   "dependencies": {
-    "@stackchain/sdk": "workspace:*"
+    "@evenlogix/stackchain-sdk": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

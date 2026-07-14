@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { resolveVariables, collectUnresolvedVariables } from '../variable-resolver/index.js';
 import { GeneratorEngine } from './index.js';
-import type { TemplateLayer } from '@stackchain/shared';
+import type { TemplateLayer } from '@evenlogix/stackchain-shared';
 
 describe('variable-resolver', () => {
   it('replaces variables', () => {

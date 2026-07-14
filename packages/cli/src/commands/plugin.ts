@@ -1,6 +1,6 @@
 import type { Command } from 'commander';
 import chalk from 'chalk';
-import { OFFICIAL_PLUGINS, PluginRegistry } from '@stackchain/registry';
+import { OFFICIAL_PLUGINS, PluginRegistry } from '@evenlogix/stackchain-registry';
 
 export function registerPluginCommand(program: Command): void {
   const plugin = program.command('plugin').description('Manage StackChain plugins');
@@ -63,7 +63,7 @@ export function registerPluginCommand(program: Command): void {
     .description('Show official StackChain ecosystem plugins')
     .action(() => {
       for (const [name, meta] of Object.entries(OFFICIAL_PLUGINS)) {
-        console.log(`${chalk.cyan(`@stackchain/${name}`)}`);
+        console.log(`${chalk.cyan(`@evenlogix/stackchain-${name}`)}`);
         console.log(`  ${meta.description}`);
         console.log(`  install: stackchain plugin install ${name}`);
         console.log();

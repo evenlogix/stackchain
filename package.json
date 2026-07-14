@@ -23,7 +23,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "pnpm build && changeset publish",
-    "pack:check": "pnpm build && mkdir -p /tmp/stackchain-packs && pnpm --filter @stackchain/shared --filter @stackchain/engine --filter @stackchain/sdk --filter @stackchain/templates --filter @stackchain/registry --filter @stackchain/cli --filter stackchain exec pnpm pack --pack-destination /tmp/stackchain-packs",
+    "pack:check": "pnpm build && mkdir -p /tmp/stackchain-packs && pnpm --filter @evenlogix/stackchain-shared --filter @evenlogix/stackchain-engine --filter @evenlogix/stackchain-sdk --filter @evenlogix/stackchain-templates --filter @evenlogix/stackchain-registry --filter @evenlogix/stackchain-cli --filter @evenlogix/stackchain exec pnpm pack --pack-destination /tmp/stackchain-packs",
     "publish:dry-run": "pnpm build && pnpm --filter \"./packages/*\" --filter \"./packages/stackchain\" publish --dry-run --access public --no-git-checks"
   },
   "devDependencies": {

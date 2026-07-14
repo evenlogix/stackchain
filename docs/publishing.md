@@ -4,20 +4,20 @@ Packages published in lockstep (same version):
 
 | Package | Install |
 |---------|---------|
-| `stackchain` | `npm i -g stackchain` |
-| `@stackchain/cli` | `npm i -g @stackchain/cli` |
-| `@stackchain/engine` | dependency |
-| `@stackchain/shared` | dependency |
-| `@stackchain/templates` | dependency |
-| `@stackchain/sdk` | dependency |
-| `@stackchain/registry` | dependency |
+| `@evenlogix/stackchain` | `npm i -g @evenlogix/stackchain` |
+| `@evenlogix/stackchain-cli` | dependency (or `npm i -g @evenlogix/stackchain-cli`) |
+| `@evenlogix/stackchain-engine` | dependency |
+| `@evenlogix/stackchain-shared` | dependency |
+| `@evenlogix/stackchain-templates` | dependency |
+| `@evenlogix/stackchain-sdk` | dependency |
+| `@evenlogix/stackchain-registry` | dependency |
 
 Official plugin packages are `private` until ready.
 
 ## One-time npm setup
 
 1. Create an npm account and verify email.
-2. Create the **`@stackchain` organization** on npm (or ask npm support if the name is taken).
+2. Ensure you have publish access to the **`@evenlogix` organization** on npm.
 3. Add publish access for your user / automation token.
 4. Create a granular access token with **read and write** for the organization.
 5. Add repo secrets:
@@ -25,7 +25,7 @@ Official plugin packages are `private` until ready.
 
 ```bash
 npm login
-npm org ls stackchain
+npm org ls evenlogix
 ```
 
 ## Local dry-run
@@ -52,21 +52,21 @@ Or publish once without changesets (bootstrap):
 
 ```bash
 pnpm build
-pnpm --filter @stackchain/shared publish --access public
-pnpm --filter @stackchain/engine publish --access public
-pnpm --filter @stackchain/sdk publish --access public
-pnpm --filter @stackchain/templates publish --access public
-pnpm --filter @stackchain/registry publish --access public
-pnpm --filter @stackchain/cli publish --access public
-pnpm --filter stackchain publish --access public
+pnpm --filter @evenlogix/stackchain-shared publish --access public --no-git-checks
+pnpm --filter @evenlogix/stackchain-engine publish --access public --no-git-checks
+pnpm --filter @evenlogix/stackchain-sdk publish --access public --no-git-checks
+pnpm --filter @evenlogix/stackchain-templates publish --access public --no-git-checks
+pnpm --filter @evenlogix/stackchain-registry publish --access public --no-git-checks
+pnpm --filter @evenlogix/stackchain-cli publish --access public --no-git-checks
+pnpm --filter @evenlogix/stackchain publish --access public --no-git-checks
 ```
 
-Publish **dependencies first**, then the CLI, then the `stackchain` launcher.
+Publish **dependencies first**, then the CLI, then the `@evenlogix/stackchain` launcher.
 
 ## After publish
 
 ```bash
-npm install -g stackchain
+npm install -g @evenlogix/stackchain
 stackchain doctor
 stackchain create flutter demo_app --org com.example -y
 ```
@@ -74,10 +74,10 @@ stackchain create flutter demo_app --org com.example -y
 ## Verify packed contents
 
 ```bash
-pnpm --filter @stackchain/cli pack
-pnpm --filter @stackchain/templates pack
-tar -tzf stackchain-cli-*.tgz | head
-tar -tzf stackchain-templates-*.tgz | head
+pnpm --filter @evenlogix/stackchain-cli pack
+pnpm --filter @evenlogix/stackchain-templates pack
+tar -tzf evenlogix-stackchain-cli-*.tgz | head
+tar -tzf evenlogix-stackchain-templates-*.tgz | head
 ```
 
-Templates must include the `flutter/` directory inside `@stackchain/templates`.
+Templates must include the `flutter/` directory inside `@evenlogix/stackchain-templates`.

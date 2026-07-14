@@ -48,4 +48,4 @@ Typical Flutter create pipeline:
 
 ## Extensibility
 
-External packages implement `StackChainPlugin` via `@stackchain/sdk` and register through `@stackchain/registry`. Enterprise plugins can encode private standards without forking the CLI.
+External packages implement `StackChainPlugin` via `@evenlogix/stackchain-sdk` and register through `@evenlogix/stackchain-registry`. Enterprise plugins can encode private standards without forking the CLI.

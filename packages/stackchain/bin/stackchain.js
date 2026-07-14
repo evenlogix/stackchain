@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { run } from '@stackchain/cli';
+import { run } from '@evenlogix/stackchain-cli';
 
 run().catch((error) => {
   const message = error instanceof Error ? error.message : String(error);
