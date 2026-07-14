@@ -1,0 +1,3 @@
+# Custom architecture
+
+Bring your own structure. Core Next.js app entrypoints live under `src/app`.

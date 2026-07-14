@@ -1,0 +1,10 @@
+import Fastify from 'fastify';
+import { env } from './core/config/env.js';
+
+const app = Fastify({ logger: true });
+
+app.get('/health', async () => ({ status: 'ok', service: env.appName }));
+app.get('/', async () => ({ message: 'Welcome to {{project_pascal}}' }));
+
+await app.listen({ port: env.port, host: '0.0.0.0' });
+console.log(`{{project_pascal}} listening on http://localhost:${env.port}`);

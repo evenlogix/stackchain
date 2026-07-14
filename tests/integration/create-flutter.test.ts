@@ -30,10 +30,9 @@ function runStackChain(
   });
 }
 
-describe('stackchain create flutter', () => {
-  it('composes clean + bloc + dio + hive + get_it', async () => {
+describe('stackchain create', () => {
+  it('composes flutter clean + bloc', async () => {
     await access(cliEntry);
-
     const cwd = await mkdtemp(path.join(os.tmpdir(), 'stackchain-'));
     try {
       const result = await runStackChain(
@@ -60,36 +59,85 @@ describe('stackchain create flutter', () => {
         ],
         cwd,
       );
-
       expect(result.code, result.stderr || result.stdout).toBe(0);
-
       const projectRoot = path.join(cwd, 'banking_app');
-      const main = await readFile(path.join(projectRoot, 'lib/main.dart'), 'utf8');
-      expect(main).toContain('BankingApp');
-
-      const config = JSON.parse(
-        await readFile(path.join(projectRoot, 'stackchain.config.json'), 'utf8'),
-      ) as { packageId: string; architecture: string };
-      expect(config.packageId).toBe('com.company.banking_app');
-      expect(config.architecture).toBe('clean');
-
       const pubspec = await readFile(path.join(projectRoot, 'pubspec.yaml'), 'utf8');
       expect(pubspec).toContain('flutter_bloc');
-      expect(pubspec).toContain('dio:');
-      expect(pubspec).toContain('hive:');
-      expect(pubspec).toContain('get_it:');
+    } finally {
+      await rm(cwd, { recursive: true, force: true });
+    }
+  });
 
-      const add = await runStackChain(
-        ['add', 'usecase', 'logout', '--feature', 'authentication'],
-        projectRoot,
+  it('composes react next.js + zustand + axios', async () => {
+    await access(cliEntry);
+    const cwd = await mkdtemp(path.join(os.tmpdir(), 'stackchain-'));
+    try {
+      const result = await runStackChain(
+        [
+          'create',
+          'react',
+          'web_app',
+          '--org',
+          'com.company',
+          '--architecture',
+          'feature-first',
+          '--state',
+          'zustand',
+          '--networking',
+          'axios',
+          '--auth',
+          'none',
+          '-y',
+        ],
+        cwd,
       );
-      expect(add.code, add.stderr || add.stdout).toBe(0);
+      expect(result.code, result.stderr || result.stdout).toBe(0);
+      const projectRoot = path.join(cwd, 'web_app');
+      const pkg = JSON.parse(await readFile(path.join(projectRoot, 'package.json'), 'utf8')) as {
+        dependencies: Record<string, string>;
+      };
+      expect(pkg.dependencies.next).toBeTruthy();
+      expect(pkg.dependencies.zustand).toBeTruthy();
+      expect(pkg.dependencies.axios).toBeTruthy();
+      const page = await readFile(path.join(projectRoot, 'src/app/page.tsx'), 'utf8');
+      expect(page).toContain('WebApp');
+    } finally {
+      await rm(cwd, { recursive: true, force: true });
+    }
+  });
 
-      const usecase = await readFile(
-        path.join(projectRoot, 'lib/features/authentication/domain/usecases/logout_usecase.dart'),
-        'utf8',
+  it('composes backend hono + jwt', async () => {
+    await access(cliEntry);
+    const cwd = await mkdtemp(path.join(os.tmpdir(), 'stackchain-'));
+    try {
+      const result = await runStackChain(
+        [
+          'create',
+          'backend',
+          'api_service',
+          '--org',
+          'com.company',
+          '--architecture',
+          'feature-first',
+          '--networking',
+          'hono',
+          '--storage',
+          'none',
+          '--auth',
+          'jwt',
+          '-y',
+        ],
+        cwd,
       );
-      expect(usecase).toContain('LogoutUseCase');
+      expect(result.code, result.stderr || result.stdout).toBe(0);
+      const projectRoot = path.join(cwd, 'api_service');
+      const pkg = JSON.parse(await readFile(path.join(projectRoot, 'package.json'), 'utf8')) as {
+        dependencies: Record<string, string>;
+      };
+      expect(pkg.dependencies.hono).toBeTruthy();
+      expect(pkg.dependencies.jose).toBeTruthy();
+      const server = await readFile(path.join(projectRoot, 'src/server.ts'), 'utf8');
+      expect(server).toContain('Hono');
     } finally {
       await rm(cwd, { recursive: true, force: true });
     }

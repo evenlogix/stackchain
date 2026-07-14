@@ -1,0 +1,6 @@
+import ky from 'ky';
+import { appConfig } from '@/core/config/app-config';
+
+export const apiClient = ky.create({
+  headers: { 'X-App': appConfig.name },
+});

@@ -84,7 +84,20 @@ export function isValidProjectName(name: string): boolean {
   return /^[a-z][a-z0-9_]*$/.test(name);
 }
 
-export function assertValidProjectName(name: string): void {
+/** npm / web project names: lowercase, hyphens or underscores. */
+export function isValidNpmProjectName(name: string): boolean {
+  return /^[a-z][a-z0-9_-]*$/.test(name);
+}
+
+export function assertValidProjectName(name: string, style: 'dart' | 'npm' = 'dart'): void {
+  if (style === 'npm') {
+    if (!isValidNpmProjectName(name)) {
+      throw new Error(
+        `Invalid project name "${name}". Use lowercase letters, digits, hyphens, or underscores; must start with a letter.`,
+      );
+    }
+    return;
+  }
   if (!isValidProjectName(name)) {
     throw new Error(
       `Invalid project name "${name}". Use lowercase letters, digits, and underscores; must start with a letter.`,

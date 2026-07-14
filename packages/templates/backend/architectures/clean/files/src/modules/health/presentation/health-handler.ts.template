@@ -1,0 +1,5 @@
+import { getHealth } from '../data/health-repository';
+
+export function handleHealth() {
+  return getHealth();
+}

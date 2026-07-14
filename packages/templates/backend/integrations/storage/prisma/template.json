@@ -1,0 +1,10 @@
+{
+  "id": "backend-storage-prisma",
+  "kind": "integration",
+  "dependencies": {
+    "@prisma/client": "^6.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.1.0"
+  }
+}

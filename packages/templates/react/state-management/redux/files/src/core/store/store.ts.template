@@ -1,0 +1,15 @@
+import { configureStore, createSlice } from '@reduxjs/toolkit';
+
+const appSlice = createSlice({
+  name: 'app',
+  initialState: { title: '{{project_pascal}}' },
+  reducers: {
+    setTitle(state, action: { payload: string }) {
+      state.title = action.payload;
+    },
+  },
+});
+
+export const { setTitle } = appSlice.actions;
+export const store = configureStore({ reducer: { app: appSlice.reducer } });
+export type RootState = ReturnType<typeof store.getState>;

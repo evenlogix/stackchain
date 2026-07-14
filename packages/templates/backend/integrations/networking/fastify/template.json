@@ -1,0 +1,7 @@
+{
+  "id": "backend-runtime-fastify",
+  "kind": "integration",
+  "dependencies": {
+    "fastify": "^5.2.0"
+  }
+}

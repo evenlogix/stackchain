@@ -1,0 +1,19 @@
+'use client';
+
+import { createContext, useContext, useMemo, useState, type ReactNode } from 'react';
+
+type AppContextValue = { title: string; setTitle: (title: string) => void };
+
+const AppContext = createContext<AppContextValue | null>(null);
+
+export function AppProvider({ children }: { children: ReactNode }) {
+  const [title, setTitle] = useState('{{project_pascal}}');
+  const value = useMemo(() => ({ title, setTitle }), [title]);
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+}
+
+export function useAppContext() {
+  const ctx = useContext(AppContext);
+  if (!ctx) throw new Error('useAppContext must be used within AppProvider');
+  return ctx;
+}

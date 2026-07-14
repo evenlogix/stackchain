@@ -1,0 +1,3 @@
+# Custom architecture
+
+Server entrypoint is \`src/server.ts\`.

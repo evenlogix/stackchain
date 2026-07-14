@@ -1,0 +1,12 @@
+# {{project_pascal}}
+
+Backend API service scaffolded by StackChain.
+
+> No runtime dependency on StackChain.
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```

@@ -1,0 +1,6 @@
+import axios from 'axios';
+import { appConfig } from '@/core/config/app-config';
+
+export const apiClient = axios.create({
+  headers: { 'X-App': appConfig.name },
+});

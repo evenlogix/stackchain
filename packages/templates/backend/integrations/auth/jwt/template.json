@@ -1,0 +1,7 @@
+{
+  "id": "backend-auth-jwt",
+  "kind": "integration",
+  "dependencies": {
+    "jose": "^5.9.6"
+  }
+}

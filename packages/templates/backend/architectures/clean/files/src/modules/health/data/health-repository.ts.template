@@ -1,0 +1,5 @@
+import type { HealthStatus } from '../domain/health';
+
+export function getHealth(): HealthStatus {
+  return { status: 'ok', service: '{{project_name}}' };
+}

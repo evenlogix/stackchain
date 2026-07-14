@@ -1,0 +1,4 @@
+export const oauthConfig = {
+  clientId: process.env.OAUTH_CLIENT_ID ?? '',
+  redirectUri: process.env.OAUTH_REDIRECT_URI ?? '',
+};

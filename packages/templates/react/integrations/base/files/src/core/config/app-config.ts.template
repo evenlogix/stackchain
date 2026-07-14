@@ -1,0 +1,5 @@
+export const appConfig = {
+  name: '{{project_name}}',
+  organization: '{{organization}}',
+  packageId: '{{package_id}}',
+} as const;

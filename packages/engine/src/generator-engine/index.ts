@@ -78,13 +78,10 @@ export class GeneratorEngine {
       !context.dryRun &&
       (Object.keys(plan.dependencies).length || Object.keys(plan.devDependencies).length)
     ) {
-      const pubspec = path.join(context.projectRoot, 'pubspec.yaml');
-      if (await this.files.exists(pubspec)) {
-        await this.deps.updatePubspec(context.projectRoot, {
-          dependencies: plan.dependencies,
-          devDependencies: plan.devDependencies,
-        });
-      }
+      await this.deps.updateManifest(context.projectRoot, {
+        dependencies: plan.dependencies,
+        devDependencies: plan.devDependencies,
+      });
     }
 
     if (!context.dryRun) {

@@ -1,0 +1,6 @@
+import { getHomeSummary } from '../data/home-repository';
+
+export async function HomePage() {
+  const home = await getHomeSummary();
+  return <section><h2>{home.title}</h2></section>;
+}

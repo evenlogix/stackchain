@@ -1,0 +1,7 @@
+{
+  "id": "react-auth-nextauth",
+  "kind": "integration",
+  "dependencies": {
+    "next-auth": "^4.24.11"
+  }
+}

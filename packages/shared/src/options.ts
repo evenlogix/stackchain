@@ -62,3 +62,57 @@ export const AUTH_OPTIONS: ChoiceOption<AuthId>[] = [
   { name: 'Custom JWT', value: 'jwt' },
   { name: 'OAuth', value: 'oauth' },
 ];
+
+/** React / Next.js option sets */
+export const REACT_ARCHITECTURE_OPTIONS: ChoiceOption<ArchitectureId>[] = [
+  { name: 'Feature First', value: 'feature-first' },
+  { name: 'Clean Architecture', value: 'clean' },
+  { name: 'Custom', value: 'custom' },
+];
+
+export const REACT_STATE_OPTIONS: ChoiceOption<StateManagementId>[] = [
+  { name: 'Zustand', value: 'zustand' },
+  { name: 'Redux Toolkit', value: 'redux' },
+  { name: 'Jotai', value: 'jotai' },
+  { name: 'React Context', value: 'context' },
+  { name: 'None', value: 'none' },
+];
+
+export const REACT_NETWORKING_OPTIONS: ChoiceOption<NetworkingId>[] = [
+  { name: 'Fetch', value: 'fetch' },
+  { name: 'Axios', value: 'axios' },
+  { name: 'Ky', value: 'ky' },
+];
+
+export const REACT_AUTH_OPTIONS: ChoiceOption<AuthId>[] = [
+  { name: 'None', value: 'none' },
+  { name: 'NextAuth.js', value: 'nextauth' },
+  { name: 'Custom JWT', value: 'jwt' },
+  { name: 'OAuth', value: 'oauth' },
+];
+
+/** Backend / API option sets */
+export const BACKEND_ARCHITECTURE_OPTIONS: ChoiceOption<ArchitectureId>[] = [
+  { name: 'Feature First', value: 'feature-first' },
+  { name: 'Clean Architecture', value: 'clean' },
+  { name: 'MVC', value: 'mvc' },
+  { name: 'Custom', value: 'custom' },
+];
+
+export const BACKEND_RUNTIME_OPTIONS: ChoiceOption<NetworkingId>[] = [
+  { name: 'Hono', value: 'hono' },
+  { name: 'Fastify', value: 'fastify' },
+  { name: 'Express', value: 'express' },
+];
+
+export const BACKEND_STORAGE_OPTIONS: ChoiceOption<StorageId>[] = [
+  { name: 'Prisma', value: 'prisma' },
+  { name: 'Drizzle', value: 'drizzle' },
+  { name: 'None', value: 'none' },
+];
+
+export const BACKEND_AUTH_OPTIONS: ChoiceOption<AuthId>[] = [
+  { name: 'None', value: 'none' },
+  { name: 'JWT', value: 'jwt' },
+  { name: 'OAuth', value: 'oauth' },
+];

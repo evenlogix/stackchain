@@ -1,0 +1,17 @@
+import express from 'express';
+import { env } from './core/config/env.js';
+
+const app = express();
+app.use(express.json());
+
+app.get('/health', (_req, res) => {
+  res.json({ status: 'ok', service: env.appName });
+});
+
+app.get('/', (_req, res) => {
+  res.json({ message: 'Welcome to {{project_pascal}}' });
+});
+
+app.listen(env.port, () => {
+  console.log(`{{project_pascal}} listening on http://localhost:${env.port}`);
+});

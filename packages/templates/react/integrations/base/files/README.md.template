@@ -1,0 +1,21 @@
+# {{project_pascal}}
+
+Next.js application scaffolded by StackChain.
+
+> StackChain is a development tool only. This project has **no runtime dependency** on StackChain.
+
+## Stack
+
+| Concern | Choice |
+|--------|--------|
+| Architecture | `{{architecture}}` |
+| State | `{{state_management}}` |
+| Networking | `{{networking}}` |
+| Auth | `{{authentication}}` |
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```

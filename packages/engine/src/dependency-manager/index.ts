@@ -1,19 +1,34 @@
 import { FileManager } from '../file-manager/index.js';
 import path from 'node:path';
 
-export interface PubspecUpdate {
+export interface ManifestUpdate {
   dependencies?: Record<string, string>;
   devDependencies?: Record<string, string>;
 }
 
+/** @deprecated Use ManifestUpdate */
+export type PubspecUpdate = ManifestUpdate;
+
 /**
- * Minimal pubspec.yaml dependency merger.
- * Preserves existing content and appends/updates dependency maps.
+ * Merges dependencies into pubspec.yaml or package.json depending on project type.
  */
 export class DependencyManager {
   constructor(private readonly files = new FileManager()) {}
 
-  async updatePubspec(projectRoot: string, update: PubspecUpdate): Promise<void> {
+  async updateManifest(projectRoot: string, update: ManifestUpdate): Promise<void> {
+    const pubspec = path.join(projectRoot, 'pubspec.yaml');
+    const packageJson = path.join(projectRoot, 'package.json');
+
+    if (await this.files.exists(pubspec)) {
+      await this.updatePubspec(projectRoot, update);
+      return;
+    }
+    if (await this.files.exists(packageJson)) {
+      await this.updatePackageJson(projectRoot, update);
+    }
+  }
+
+  async updatePubspec(projectRoot: string, update: ManifestUpdate): Promise<void> {
     const pubspecPath = path.join(projectRoot, 'pubspec.yaml');
     if (!(await this.files.exists(pubspecPath))) {
       throw new Error(`pubspec.yaml not found at ${pubspecPath}`);
@@ -23,6 +38,24 @@ export class DependencyManager {
     content = this.mergeSection(content, 'dependencies', update.dependencies ?? {});
     content = this.mergeSection(content, 'dev_dependencies', update.devDependencies ?? {});
     await this.files.writeText(pubspecPath, content);
+  }
+
+  async updatePackageJson(projectRoot: string, update: ManifestUpdate): Promise<void> {
+    const packageJsonPath = path.join(projectRoot, 'package.json');
+    if (!(await this.files.exists(packageJsonPath))) {
+      throw new Error(`package.json not found at ${packageJsonPath}`);
+    }
+
+    const raw = await this.files.readText(packageJsonPath);
+    const pkg = JSON.parse(raw) as {
+      dependencies?: Record<string, string>;
+      devDependencies?: Record<string, string>;
+    };
+
+    pkg.dependencies = { ...(pkg.dependencies ?? {}), ...(update.dependencies ?? {}) };
+    pkg.devDependencies = { ...(pkg.devDependencies ?? {}), ...(update.devDependencies ?? {}) };
+
+    await this.files.writeText(packageJsonPath, `${JSON.stringify(pkg, null, 2)}\n`);
   }
 
   private mergeSection(

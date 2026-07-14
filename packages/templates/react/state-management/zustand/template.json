@@ -1,0 +1,7 @@
+{
+  "id": "react-state-zustand",
+  "kind": "state-management",
+  "dependencies": {
+    "zustand": "^5.0.2"
+  }
+}

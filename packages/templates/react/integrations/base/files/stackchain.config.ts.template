@@ -1,0 +1,18 @@
+/**
+ * StackChain project configuration.
+ * Used by the StackChain CLI. This app does NOT depend on StackChain at runtime.
+ */
+export default {
+  version: 1,
+  project: { name: '{{project_name}}' },
+  organization: { identifier: '{{organization}}' },
+  packageId: '{{package_id}}',
+  framework: 'react',
+  architecture: '{{architecture}}',
+  stateManagement: '{{state_management}}',
+  dependencyInjection: '{{dependency_injection}}',
+  networking: '{{networking}}',
+  storage: '{{storage}}',
+  authentication: '{{authentication}}',
+  plugins: [],
+};

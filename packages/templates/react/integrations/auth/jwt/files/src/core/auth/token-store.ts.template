@@ -1,0 +1,13 @@
+export type JwtTokens = { accessToken?: string; refreshToken?: string };
+
+let tokens: JwtTokens = {};
+
+export const tokenStore = {
+  get: () => tokens,
+  set: (next: JwtTokens) => {
+    tokens = next;
+  },
+  clear: () => {
+    tokens = {};
+  },
+};

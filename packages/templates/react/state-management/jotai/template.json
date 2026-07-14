@@ -1,0 +1,7 @@
+{
+  "id": "react-state-jotai",
+  "kind": "state-management",
+  "dependencies": {
+    "jotai": "^2.11.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "react-networking-ky",
+  "kind": "integration",
+  "dependencies": {
+    "ky": "^1.7.4"
+  }
+}

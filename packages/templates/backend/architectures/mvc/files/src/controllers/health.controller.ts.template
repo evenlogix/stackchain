@@ -1,0 +1,5 @@
+import type { HealthModel } from '../models/health.model';
+
+export function getHealth(): HealthModel {
+  return { status: 'ok', service: '{{project_name}}' };
+}

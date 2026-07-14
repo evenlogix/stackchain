@@ -1,0 +1,5 @@
+import type { HomeSummary } from '../domain/home';
+
+export async function getHomeSummary(): Promise<HomeSummary> {
+  return { title: '{{project_pascal}}' };
+}

@@ -25,11 +25,12 @@ No combinatorial template explosion (`flutter-clean-bloc`, `flutter-mvvm-riverpo
 | Capability | Status |
 |-----------|--------|
 | Flutter project generation | ✅ Available |
-| Feature / component generators | ✅ Available |
+| React / Next.js generation | ✅ Available |
+| Backend / API generation | ✅ Available |
+| Feature / component generators | ✅ Available (Flutter) |
 | Plugin system + SDK | ✅ Available |
 | Official ecosystem plugins | ✅ Scaffolded |
-| React / Next.js | 🔜 Planned |
-| Backend / API / DevOps | 🔜 Planned |
+| DevOps / infrastructure | 🔜 Planned |
 
 ## Repository layout
 
@@ -115,6 +116,42 @@ stackchain create flutter banking_app \
   --networking dio \
   --storage hive \
   --auth none \
+  -y
+```
+
+### Create a React / Next.js app
+
+```bash
+stackchain create react web_app --org com.company -y
+```
+
+Composable layers: architecture (`feature-first`, `clean`, `custom`) + state (`zustand`, `redux`, `jotai`, `context`, `none`) + networking (`fetch`, `axios`, `ky`) + auth (`none`, `nextauth`, `jwt`, `oauth`).
+
+```bash
+stackchain create react dashboard \
+  --org com.company \
+  --architecture clean \
+  --state zustand \
+  --networking axios \
+  --auth none \
+  -y
+```
+
+### Create a Backend / API service
+
+```bash
+stackchain create backend api_service --org com.company -y
+```
+
+Composable layers: architecture + runtime (`hono`, `fastify`, `express`) + storage (`prisma`, `drizzle`, `none`) + auth (`none`, `jwt`, `oauth`).
+
+```bash
+stackchain create backend payments_api \
+  --org com.company \
+  --architecture feature-first \
+  --networking hono \
+  --storage prisma \
+  --auth jwt \
   -y
 ```
 
