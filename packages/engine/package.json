@@ -1,6 +1,6 @@
 {
   "name": "@evenlogix/stackchain-engine",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Composable generator engine for StackChain",
   "type": "module",
   "main": "./dist/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@evenlogix/stackchain-sdk",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Plugin SDK for building StackChain generators and integrations",
   "type": "module",
   "main": "./dist/index.js",
